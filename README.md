@@ -1,14 +1,18 @@
-## DOCKER PYTHON
+## PRODUCT - API
+
+* Python 3.8;
+* Docker;
+* Docker-compose;
 
 
 ### Init
 
-#### Image build
-```
-docker build -t python-docker -f dockerfile .
-```
-
 #### start
 ```
-docker run -d -p 5000:5000 --name pyton-teste python-docker:latest
+docker-compose up -d
+```
+
+#### down
+```
+docker-compose down
 ```

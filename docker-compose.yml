@@ -1,0 +1,15 @@
+
+version: '3.3'
+
+services:
+  python-docker:
+    container_name: python-docker
+    command: python3 -m flask run --host=0.0.0.0
+    build:
+      dockerfile: Dockerfile
+      context: docker
+    image: python-docker
+    volumes:
+      - .:/app
+    ports: 
+      - "5000:5000"
