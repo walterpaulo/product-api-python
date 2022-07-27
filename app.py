@@ -1,7 +1,7 @@
-from flask import Flask
-app = Flask(__name__)
+from lzma import FORMAT_ALONE
+from src.server.instance import server
 
+from src.controllers.home import *
+from src.controllers.products import *
 
-@app.route('/')
-def hello_world():
-    return 'Cadastro de Produto - API'
+server.run()
